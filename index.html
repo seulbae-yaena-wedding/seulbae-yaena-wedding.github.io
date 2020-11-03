@@ -7,7 +7,23 @@
   <link rel="stylesheet" href="./w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="./gallery.js"></script>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    Kakao.init('1dff1a09bd604ff15c9bef7ff36d365c');
+    Kakao.isInitialized();
+  </script>
 
+
+  <script type="text/javascript">
+  function kakaonavi() {
+    Kakao.Navi.start({
+      name: '그랜드 인터컨티넨탈 서울 파르나스',
+      x: 127.060814,
+      y: 37.509138,
+      coordType: 'wgs84',
+    })
+  }
+  </script>
   <style>
   @font-face {
       font-family: 'MaruBuri-Regular';
@@ -266,10 +282,10 @@
             href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xxeebac22dad6c4d838f6803be684006b7&name=그랜드인터컨티넨탈서울파르나스&lon=127.060814&lat=37.509138" class="tmap">티맵</a>
         </li>
         <li>
-          <a href="" class="kakaonavi">카카오네비</a>
+          <a href="#" onclick="kakaonavi();" class="kakaonavi">카카오네비</a>
         </li>
         <li>
-          <a href="" class="kakaomap">카카오맵</a>
+          <a href="http://kko.to/YpwIFn3Yo" class="kakaomap">카카오맵</a>
         </li>
         <li>
           <a href="" class="navermap">네이버지도</a>
