@@ -15,26 +15,27 @@
       font-weight: normal;
       font-style: normal;
   }
-  body,h1,h2{
+
+  body, h1, h2 {
     font-family: "MaruBuri-Regular", sans-serif;
   }
+
   body, html {
     height: 100%
   }
+
   p {
     line-height: 1.5
   }
+
   .bgimg, .bgimg2 {
     min-height: 100%;
     background-position: center;
     background-size: cover;
   }
-  .bgimg {
-    background-image: url("img/3521.jpg")
-  }
 
   .w3-display-toppad {
-    padding-top: 10%;
+    padding-top: 2rem;
   }
   .w3-larger {
     font-size: 20px !important;
@@ -134,8 +135,50 @@
   }
   .img-main {
     max-width: 80%;
+    max-height: 40rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .maplink {
+    padding:1.250rem 0 0.938rem;
+    background:#fafafa;
+    font-size: 0;
+    line-height:0;
+    text-align: center;
+  }
+  .maplink li {
+    display:inline-block;
+    vertical-align:top;
+    width:3.750rem;
+    padding:0 0.625rem;
+    box-sizing:content-box;
+  }
+  .maplink a {
+    position:relative;
+    display:block;
+    padding-top:4.438rem;
+    font-size:1rem;
+    font-weight:400;
+    line-height:1rem;
+    color:#111;
+    text-decoration:none;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+
+  .maplink .tmap {
+    background-image: url("icon/tmap.png");
+  }
+  .maplink .kakaomap {
+    background-image: url("icon/kakaomap.png");
+  }
+  .maplink .navermap {
+    background-image: url("icon/navermap.png");
+  }
+  .maplink .kakaonavi {
+    background-image: url("icon/kakaonavi.png");
   }
 
   </style>
@@ -143,7 +186,7 @@
 
 <body>
 <!-- Header / Home-->
-<header class="w3-display-container w3-wide" id="home">
+<header class="w3-display-container w3-wide">
   <div class="w3-display-toppad w3-text-black w3-center">
     <h1 class="w3-xlarge">Wedding Invitation</h1>
     <img class="img-main" src="img/0115_resized.jpg">
@@ -158,30 +201,18 @@
   </div>
 </header>
 
-<!--
-   - [> Navbar (sticky bottom) <]
-   - <div class="w3-bottom w3-hide-small">
-   -   <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
-   -     <a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
-   -     <a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#us" style="width:25%" class="w3-bar-item w3-button">Jane &amp; John</a>
-   -     <a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#wedding" style="width:25%" class="w3-bar-item w3-button">Wedding</a>
-   -     <a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#rsvp" style="width:25%" class="w3-bar-item w3-button w3-hover-black">RSVP</a>
-   -   </div>
-   - </div>
--->
-
 <br>
 <hr>
 
 <!-- intro -->
-<div class="w3-container w3-padding-64 w3-grayscale-hint" id="poem">
-  <div class="w3-content">
-    <h1 class="w3-large w3-center w3-text-grey">
+<div class="w3-container w3-padding-64 w3-grayscale-hint">
+  <div class="w3-content w3-center">
+    <h1 class="w3-large w3-text-black">
       <b>소중한 분들을 초대합니다.</b>
     </h1>
-    <img class="w3-round"
-         src="img/2737.jpg"
-         style="width:100%;margin:24px 0">
+    <!-- <img class="w3-round" -->
+         <!-- src="img/2737.jpg" -->
+         <!-- style="width:100%;margin:24px 0"> -->
     <p class="w3-center">
       사랑은 소유가 아니라 <br>
       동행임을 아는 두 사람은 <br>
@@ -195,54 +226,56 @@
       박미라 시인 '아름다운 날에 부치다'
       </span>
     </p>
+      <br>
+      <br>
     <!-- <p class="w3-center"><a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#wedding" class="w3-button w3-black w3-round w3-padding-large w3-large">Wedding Details</a></p> -->
+    <p class="w3-large">
+    김현준 · 문혜신<span class="w3-medium">의 장남</span> <b>슬배</b>
+    </p>
+    <p class="w3-large">
+    이성수 · 배경미<span class="w3-medium">의 장녀</span> <b>예나</b>
+    </p>
   </div>
 </div>
 
-<!-- Background photo -->
-<!--
-   - <div class="w3-display-container bgimg2">
-   -   <div class="w3-display-middle w3-text-white w3-center">
-   -     <h1 class="w3-jumbo">You Are Invited</h1><br>
-   -     <h2>Of course..</h2>
-   -   </div>
-   - </div>
-   -->
 <hr>
 
-<!-- Bride and groom -->
-<div class="w3-container w3-padding-64 w3-grayscale-hint w3-center" id="wedding">
-  <div class="w3-content">
-      <div class="w3-half">
-        <!-- <h2>신랑</h2> -->
-        <p class="w3-larger">김현준 · 문혜신의 장남 슬배</p>
-        <!-- <img class="w3-round-large profile" src="./img/seulbae.jpg"> -->
-      </div>
-      <div class="w3-half">
-        <!-- <h2>신부</h2> -->
-        <p class="w3-larger">이성수 · 배경미의 장녀 예나</p>
-        <!-- <img class="w3-round-large profile" src="./img/yaena.jpg"> -->
-      </div>
-  </div>
-</div>
-
 <!-- Wedding information -->
-<div class="w3-container w3-padding-64 w3-grayscale-min w3-center" id="wedding">
+<div class="w3-container w3-padding-64 w3-center">
   <div class="w3-content">
-    <!-- <h1 class="w3-text-grey"><b>시간, 장소</b></h1> -->
-    <!-- <img class="w3-round-large w3-grayscale-min" src="./W3.CSS Template_files/wedding_location.jpg" style="width:100%;margin:64px 0"> -->
-
-    <div class="w3-row">
-      <div class="w3-half">
-        <h2>When</h2>
-        <p>2020년 12월 19일 토요일 오후 6시</p>
-      </div>
-      <div class="w3-half">
-        <h2>Where</h2>
-        <p>그랜드 인터컨티넨탈 서울 파르나스</p>
-        <p>5층 그랜드볼룸</p>
-      </div>
+    <h1 class="w3-xlarge w3-center w3-text-grey">
+      <b>오시는 길</b>
+    </h1>
+    <br>
+    <div class="w3-large">
+      서울시 강남구 테헤란로 521<br>
+      02-555-5656
     </div>
+    <div style="height: 360px;">
+      <a href="http://kko.to/XOBegn3YM" target="_blank">
+        <img src="https://t1.daumcdn.net/roughmap/imgmap/761d295015aa23e021a9ddc843639fa54e717850e229f02be5ddc2dc1b13b03a"
+             width="100%"
+             height="100%"
+             style="border:1px solid #ccc;">
+      </a>
+    </div>
+    <div class="maplink">
+      <ul>
+        <li>
+          <a href="" class="tmap">티맵</a>
+        </li>
+        <li>
+          <a href="" class="kakaonavi">카카오네비</a>
+        </li>
+        <li>
+          <a href="" class="kakaomap">카카오맵</a>
+        </li>
+        <li>
+          <a href="" class="navermap">네이버지도</a>
+        </li>
+    </div>
+    <div></div>
+
   </div>
 </div>
 
@@ -250,7 +283,7 @@
 
 <div class="w3-container w3-padding-64 w3-center" id="wedding">
   <div class="w3-content">
-    <h1 class="w3-xlarger w3-center w3-text-grey">
+    <h1 class="w3-xlarge w3-center w3-text-grey">
       <b>GALLERY</b>
     </h1>
 
