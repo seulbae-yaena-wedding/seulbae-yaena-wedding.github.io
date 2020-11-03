@@ -1,1 +1,343 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>슬배 예나 청첩장</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./gallery.js"></script>
+
+  <style>
+  @font-face {
+      font-family: 'MaruBuri-Regular';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  body,h1,h2{
+    font-family: "MaruBuri-Regular", sans-serif;
+  }
+  body, html {
+    height: 100%
+  }
+  p {
+    line-height: 1.5
+  }
+  .bgimg, .bgimg2 {
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .bgimg {
+    background-image: url("img/3521.jpg")
+  }
+
+  .w3-display-toppad {
+    padding-top: 15%;
+  }
+  .w3-larger {
+    font-size: 20px !important;
+  }
+  .w3-xlarger {
+    font-size: 32px !important;
+  }
+  .w3-grayscale-hint {
+    filter: grayscale(25%);
+  }
+  .profile {
+    max-width: 70%;
+  }
+
+  .gallery-grid {
+  }
+  .gallery-grid:after{
+    content:'';
+    display:block;
+    clear:both;
+  }
+  .gallery-grid li{
+    list-style: none;
+    float:left;
+    width:33.333%;
+    padding:0.125rem 0.063rem 0;
+    box-sizing:border-box;
+  }
+  .gallery-grid .imgbox{
+    display:block;
+    padding-bottom:100%;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .imgbox:hover {
+    opacity: 0.7;
+  }
+  .gallery-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  ul, tr, td, span {
+    margin:0; padding:0;
+  }
+
+  .gallery-pop-wrap{
+    z-index:101;
+    position:fixed;
+    left:0; top:0;
+    right:0; bottom:0;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+    transition:all .3s;
+    background:#000;
+  }
+  .gallery-pop-wrap .pop-header{
+    height:3.188rem;
+    background-color:#000;
+    border-bottom:1px solid #333;
+    margin-bottom:1.250rem;
+  }
+  .gallery-pop-wrap .pop-header .tit{
+    font-family:"Noto Sans KR";
+    font-size:1.125rem;
+    font-weight:400;
+    line-height:3.125rem;
+    color:#fff;
+    text-align:center;
+  }
+  .gallery-pop-wrap .close-btn{
+    position: absolute;
+    right: 0; top: 0;
+    display:block;
+    width: 3.375rem;
+    height:3.188rem;
+    background: url("img/close.png") 50% 50% no-repeat;
+    background-size:0.875rem auto;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  /* popup */
+  .pop-body{
+    position:relative; background:#fff; padding:1.875rem 0;
+  }
+  .gallery-pop-wrap .pop-body{
+    height:calc(100% - 4.438rem);
+    background-color: #333;
+    background-image: none;
+    padding:0;
+    visibility:hidden;
+    opacity:0;
+  }
+
+  </style>
+</head>
+
+<body>
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg w3-grayscale-hint" id="home">
+  <div class="w3-display-toppad w3-text-white w3-center">
+    <h2><b>2020년 12월 19일</b></h2>
+    <h1 class="w3-xlarger">
+      <b>슬배 <span class="w3-large">&amp;</span> 예나</b>
+    </h1>
+  </div>
+</header>
+
+<!--
+   - [> Navbar (sticky bottom) <]
+   - <div class="w3-bottom w3-hide-small">
+   -   <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+   -     <a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
+   -     <a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#us" style="width:25%" class="w3-bar-item w3-button">Jane &amp; John</a>
+   -     <a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#wedding" style="width:25%" class="w3-bar-item w3-button">Wedding</a>
+   -     <a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#rsvp" style="width:25%" class="w3-bar-item w3-button w3-hover-black">RSVP</a>
+   -   </div>
+   - </div>
+   -->
+
+<!-- intro -->
+<div class="w3-container w3-padding-64 w3-grayscale-hint" id="poem">
+  <div class="w3-content">
+    <h1 class="w3-large w3-center w3-text-grey">
+      <b>소중한 분들을 초대합니다.</b>
+    </h1>
+    <img class="w3-round"
+         src="img/2737.jpg"
+         style="width:100%;margin:24px 0">
+    <p class="w3-center">
+      사랑은 소유가 아니라 <br>
+      동행임을 아는 두 사람은 <br>
+      잡은 손을 놓지 않되 <br>
+      함부로 잡아끌지 않을 것이며 <br>
+      서로의 두 눈을 고요히 바라보아 <br>
+      말하지 않아도 <br>
+      같은 쪽으로 걸어 가리라 <br>
+      <br>
+      <span class="w3-small">
+      박미라 시인 '아름다운 날에 부치다'
+      </span>
+    </p>
+    <!-- <p class="w3-center"><a href="https://www.w3schools.com/w3css/tryw3css_templates_wedding.htm#wedding" class="w3-button w3-black w3-round w3-padding-large w3-large">Wedding Details</a></p> -->
+  </div>
+</div>
+
+<!-- Background photo -->
+<!--
+   - <div class="w3-display-container bgimg2">
+   -   <div class="w3-display-middle w3-text-white w3-center">
+   -     <h1 class="w3-jumbo">You Are Invited</h1><br>
+   -     <h2>Of course..</h2>
+   -   </div>
+   - </div>
+   -->
+
+<!-- Bride and groom -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-hint w3-center" id="wedding">
+  <div class="w3-content">
+      <div class="w3-half">
+        <!-- <h2>신랑</h2> -->
+        <p class="w3-larger">김현준, 문혜신의 장남 슬배</p>
+        <img class="w3-round-large profile" src="./img/seulbae.jpg">
+      </div>
+      <div class="w3-half">
+        <!-- <h2>신부</h2> -->
+        <p class="w3-larger">이성수, 배경미의 장녀 예나</p>
+        <img class="w3-round-large profile" src="./img/yaena.jpg">
+      </div>
+  </div>
+</div>
+
+<!-- Wedding information -->
+<div class="w3-container w3-padding-64 w3-grayscale-min w3-center" id="wedding">
+  <div class="w3-content">
+    <!-- <h1 class="w3-text-grey"><b>시간, 장소</b></h1> -->
+    <!-- <img class="w3-round-large w3-grayscale-min" src="./W3.CSS Template_files/wedding_location.jpg" style="width:100%;margin:64px 0"> -->
+
+    <div class="w3-row">
+      <div class="w3-half">
+        <h2>When</h2>
+        <p>2020년 12월 19일 토요일 오후 6시</p>
+      </div>
+      <div class="w3-half">
+        <h2>Where</h2>
+        <p>그랜드 인터컨티넨탈 서울 파르나스</p>
+        <p>5층 그랜드볼룸</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-padding-64 w3-center" id="wedding">
+  <div class="w3-content">
+    <h1 class="w3-xlarger w3-center w3-text-grey">
+      <b>GALLERY</b>
+    </h1>
+
+    <ul class="gallery-grid">
+      <li onclick="image_pop('open');">
+        <div class="imgbox"
+             style="background-image:url(img/0115.jpg);"></div>
+      </li>
+      <li onclick="image_pop('open');">
+        <div class="imgbox"
+             style="background-image:url(img/1432.jpg);"></div>
+      </li>
+      <li onclick="image_pop('open');">
+        <div class="imgbox"
+             style="background-image:url(img/2238.jpg);"> </div>
+      </li>
+      <li onclick="image_pop('open');">
+        <div class="imgbox"
+             style="background-image:url(img/3697.jpg);"></div>
+      </li>
+      <li onclick="image_pop('open');">
+        <div class="imgbox"
+             style="background-image:url(img/4008.jpg);"></div>
+      </li>
+      <li onclick="image_pop('open');">
+        <div class="imgbox"
+             style="background-image:url(img/4791.jpg);"></div>
+      </li>
+      <li onclick="image_pop('open');">
+        <div class="imgbox"
+             style="background-image:url(img/5536.jpg);"></div>
+      </li>
+      <li onclick="image_pop('open');">
+        <div class="imgbox"
+             style="background-image:url(img/6791.jpg);"></div>
+      </li>
+      <li onclick="image_pop('open');">
+        <div class="imgbox"
+             style="background-image:url(img/6944.jpg);"></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- RSVP section -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
+  <h1>코로나 관련 공지</h1>
+  <p class="w3-large w3-justify">
+  사회적 거리두기로 인하여 부득이하게 참석자 수를 사전에 파악하고 있습니다. 부담 없이 참석 여부를 알려주시면 저희가 준비하는 데에 큰 도움이 되오니, 아래의 버튼을 눌러 설문 작성을 부탁드립니다.
+  </p>
+  <p class="w3-xlarge">
+    <button
+      onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;block&#39;"
+      class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off"
+    style="padding:8px 60px">참석 여부 알리기</button>
+  </p>
+</div>
+
+<!--
+   - [> RSVP modal <]
+   - <div id="id01" class="w3-modal">
+   -   <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+   -     <div class="w3-container w3-white w3-center">
+   -       <h1 class="w3-wide">CAN YOU COME?</h1>
+   -       <p>We really hope you can make it.</p>
+   -       <form>
+   -         <input class="w3-input w3-border" type="text" placeholder="Name(s)" name="name">
+   -       </form>
+   -       <p><i>Sincerely, John &amp; Jane</i></p>
+   -       <div class="w3-row">
+   -         <div class="w3-half">
+   -           <button onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;none&#39;" type="button" class="w3-button w3-block w3-green">Going</button>
+   -         </div>
+   -         <div class="w3-half">
+   -           <button onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;none&#39;" type="button" class="w3-button w3-block w3-red">Can't come</button>
+   -         </div>
+   -       </div>
+   -     </div>
+   -   </div>
+   - </div>
+   -->
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
+</footer>
+<div class="w3-hide-small" style="margin-bottom:32px">&nbsp;</div>
+
+<!-- Gallery popup -->
+<div class="w3-container">
+  <div class="gallery-pop-wrap">
+    <div class="pop-header">
+      <div class="tit">갤러리</div>
+    </div>
+    <div class="pop-body">
+      <div class="box w3-center">
+        <img class="gallery-img" src="img/0115.jpg">
+      </div>
+    </div>
+    <button href="javascript:pcAlert();"
+            class="close-btn"
+            onclick="image_pop('close')">닫기</button>
+  </div>
+</div>
+
+</body>
+</html>
