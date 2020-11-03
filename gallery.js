@@ -21,9 +21,11 @@ function scrollAuto() {  // 스크롤 Auto
   window.scrollTo(0, winTop);
 }
 
-function image_pop(toggle) {
+function image_pop(toggle, id) {
   var elem = $(".gallery-pop-wrap");
   var pbd = elem.find(".pop-body");
+  var img = pbd.find("#img"+id);
+  console.log(img);
 
   if(toggle === "open"){
     elem.css({
@@ -36,11 +38,22 @@ function image_pop(toggle) {
       "opacity": 1,
     });
 
+    img.css({
+      "visibility": "visible",
+      "opacity": 1,
+      "height": "100%"
+    });
+
     scrollFixed();
 
   } else if(toggle === "close"){
     elem.removeAttr("style");
     pbd.removeAttr("style");
+    var i;
+    for (i = 1; i < 10; i++) {
+      var img = pbd.find("#img" + i);
+      img.removeAttr("style");
+    }
     scrollAuto();
   }
 }
