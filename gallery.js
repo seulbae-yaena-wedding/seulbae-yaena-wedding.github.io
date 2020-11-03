@@ -25,7 +25,6 @@ function image_pop(toggle, id) {
   var elem = $(".gallery-pop-wrap");
   var pbd = elem.find(".pop-body");
   var img = pbd.find("#img"+id);
-  console.log(img);
 
   if(toggle === "open"){
     elem.css({
