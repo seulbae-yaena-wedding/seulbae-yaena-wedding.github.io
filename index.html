@@ -34,6 +34,13 @@
       font-style: normal;
   }
 
+  @media (min-width: 1024px) {
+    html {
+      margin: auto;
+      width: 80%;
+    }
+  }
+
   body, h1, h2 {
     font-family: "MaruBuri-Regular", sans-serif;
   }
@@ -101,6 +108,13 @@
     margin:0; padding:0;
   }
 
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
   .gallery-pop-wrap{
     z-index:101;
     position:fixed;
@@ -133,7 +147,7 @@
     display:block;
     width: 3.375rem;
     height:3.188rem;
-    background: url("img/close.png") 50% 50% no-repeat;
+    background: url("icon/close.png") 50% 50% no-repeat;
     background-size:0.875rem auto;
     font-size: 0;
     line-height: 0;
@@ -312,17 +326,16 @@
     <div class="maplink">
       <ul>
         <li>
-          <a
-            href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xxeebac22dad6c4d838f6803be684006b7&name=그랜드인터컨티넨탈서울파르나스&lon=127.060814&lat=37.509138" class="tmap">티맵</a>
+          <a href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xxeebac22dad6c4d838f6803be684006b7&name=그랜드인터컨티넨탈서울파르나스&lon=127.060814&lat=37.509138" class="tmap">티맵</a>
         </li>
         <li>
           <a href="#" onclick="kakaonavi();" class="kakaonavi">카카오네비</a>
         </li>
         <li>
-          <a href="http://kko.to/YpwIFn3Yo" class="kakaomap">카카오맵</a>
+          <a href="http://kko.to/YpwIFn3Yo" target="_blank" class="kakaomap">카카오맵</a>
         </li>
         <li>
-          <a href="http://naver.me/GyjJel1k" class="navermap">네이버지도</a>
+          <a href="http://naver.me/GyjJel1k" target="_blank" class="navermap">네이버지도</a>
         </li>
     </div>
 
@@ -417,9 +430,11 @@
    -->
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
-</footer>
+<!--
+   - <footer class="w3-center w3-black w3-padding-16">
+   -   [> <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> <]
+   - </footer>
+   -->
 <div class="w3-hide-small" style="margin-bottom:32px">&nbsp;</div>
 
 <!-- Gallery popup -->
