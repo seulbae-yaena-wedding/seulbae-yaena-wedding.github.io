@@ -1,4 +1,4 @@
-function scrollFixed() { // 스크롤 Fixed
+function scrollFixed() {
   var isTablet = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|Windows Phone)/);
   var ovY;
   !isTablet === true ? (ovY = "scroll") : (ovY = "hidden");
@@ -12,7 +12,7 @@ function scrollFixed() { // 스크롤 Fixed
   });
 }
 
-function scrollAuto() {  // 스크롤 Auto
+function scrollAuto() {
   var hTop = $("html").css("top");
   var hTop_2 = hTop.split("px");
   var winTop = Math.abs(hTop_2[0]);
@@ -33,16 +33,16 @@ function image_pop(toggle, id) {
       "transform": "translate3d(0,0,0)"
     });
 
-    pbd.css({
-      "visibility": "visible",
-      "opacity": 1,
-    });
+    pbd.css({"visibility": "visible"}).delay(400).animate({
+      "opacity": 1
+    }, 300);
 
     img.css({
       "visibility": "visible",
+    }).delay(400).animate({
       "opacity": 1,
       "height": "100%"
-    });
+    }, 300);
 
     scrollFixed();
 
