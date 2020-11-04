@@ -42,7 +42,7 @@ p {
 }
 
 .letter-spacing-smaller {
-  letter-spacing: 0em;
+  letter-spacing: normal;
 }
 
 .w3-display-toppad {
