@@ -23,6 +23,28 @@ p {
   background-size: cover;
 }
 
+.graybg {
+  background-color: rgb(245, 238, 215, 0.45);
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.location-info {
+  padding-top: 1em;
+}
+
+.neg-padding {
+  margin-bottom: -0.5em;
+}
+
+.pos-padding {
+  margin-bottom: 2em;
+}
+
+.letter-spacing-smaller {
+  letter-spacing: 0em;
+}
+
 .w3-display-toppad {
   padding-top: 2rem;
 }

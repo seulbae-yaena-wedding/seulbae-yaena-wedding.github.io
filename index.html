@@ -75,12 +75,14 @@
     </p>
       <br>
       <br>
-    <p class="w3-large">
-    김현준 · 문혜신<span class="w3-medium">의 장남</span> <b>슬배</b>
-    </p>
-    <p class="w3-large">
-    이성수 · 배경미<span class="w3-medium">의 장녀</span> <b>예나</b>
-    </p>
+      <div class="graybg">
+        <p class="w3-large">
+        김현준 · 문혜신<span class="w3-medium">의 장남</span> <b>슬배</b>
+        </p>
+        <p class="w3-large">
+        이성수 · 배경미<span class="w3-medium">의 장녀</span> <b>예나</b>
+        </p>
+      </div>
   </div>
 </div>
 
@@ -97,7 +99,7 @@
       서울시 강남구 테헤란로 521<br>
       02-555-5656
     </div>
-    <div id="map" style="width:100%;height:320px;"></div>
+    <div id="map" style="width:100%;height:230px;"></div>
     <script>
       var container = document.getElementById('map');
       var lat = 37.509138;
@@ -142,6 +144,22 @@
           <a href="http://naver.me/GyjJel1k" target="_blank" class="navermap">네이버지도</a>
         </li>
     </div>
+    <div class="location-info">
+      <h1 class="w3-medium neg-padding">지하철 안내</h1>
+      <p class="w3-small pos-padding">
+      2호선 삼성역 5번 출구 도보 1분<br>
+      (지하 파르나스몰 내 연결 엘리베이터 이용 가능)
+      </p>
+      <h1 class="w3-medium neg-padding">주차 안내</h1>
+      <p class="w3-small pos-padding">
+      호텔 주차장 4시간 무료 이용 가능
+      </p>
+      <h1 class="w3-medium neg-padding">기타 안내</h1>
+      <p class="w3-small pos-padding">
+      봉은사 건너편 인터컨티넨탈 코엑스와 혼동 하지 않도록 주의하세요.
+      </p>
+    </div>
+
 
   </div>
 </div>
@@ -199,14 +217,21 @@
 <!-- RSVP section -->
 <div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
   <h1 class="w3-xlarge">코로나 관련 공지</h1>
-  <p class="w3-large w3-left-align">
-  사회적 거리두기로 인하여 부득이하게 참석자 수를 사전에 파악하고 있습니다. 부담 없이 참석 여부를 알려주시면 저희가 준비하는 데에 큰 도움이 되오니, 아래의 버튼을 눌러 설문 작성을 부탁드립니다.
+  <p class="w3-medium w3-left-align letter-spacing-smaller">
+  &nbsp;&nbsp;사회적 거리두기를 준수하기 위해 좌석 배치를 하고 있습니다.
+  식사와 좌석 마련을 위해 미리 참석 여부를 말씀해 주시면 큰 도움이 되겠습니다.
+  아래 버튼을 눌러 참석 여부를 알려주세요.
+
+  <!-- 부득이하게 (좌석 배치를 위해) 참석자 수를 사전에 파악하고 있습니다. 부담 없이 참석 여부를 알려주시면 저희가 준비하는 데에 큰 도움이 되오니, 아래의 버튼을 눌러 설문 작성을 부탁드립니다. -->
   </p>
   <p class="w3-large">
     <button
       onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdyc7y__KUAdlUhhukQ6VhAvMXSQHatKkImSAZHiTgPsfQ1Kw/viewform?usp=sf_link', '_blank')"
       class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off"
-    style="padding:8px 60px">참석 여부 알리기</button>
+    style="padding:8px 40px">
+      참석 여부 알리기<br>
+      <span class="w3-small">(RSVP)</span>
+    </button>
   </p>
 </div>
 
