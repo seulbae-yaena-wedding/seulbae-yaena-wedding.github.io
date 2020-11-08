@@ -49,7 +49,8 @@ function image_pop(toggle, id) {
     elem.removeAttr("style");
     pbd.removeAttr("style");
     var i;
-    for (i = 1; i < 10; i++) {
+    var num_img = 12;
+    for (i = 1; i < num_img+1; i++) {
       var img = pbd.find("#img" + i);
       img.removeAttr("style");
     }
