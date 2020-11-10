@@ -86,7 +86,7 @@ p {
   opacity: 0.7;
 }
 .gallery-img {
-  max-width: 90%;
+  max-width: 80%;
   max-height: 100%;
 }
 
@@ -120,7 +120,7 @@ a:hover {
   margin-bottom:1.250rem;
 }
 .gallery-pop-wrap .pop-header .tit{
-  font-family:"Noto Sans KR";
+  /* font-family:"Noto Sans KR"; */
   font-size:1.125rem;
   font-weight:400;
   line-height:3.125rem;
@@ -161,6 +161,32 @@ a:hover {
   opacity:0;
   margin: auto;
   height: 0em;
+}
+
+.slider-prev {
+    background-image:url("./icon/prev.png");
+    left: 0rem;
+}
+.slider-next {
+    background-image:url("./icon/next.png");
+    right: 0rem;
+}
+
+.slider {
+  height: 0px;
+}
+
+.slider > a {
+  width: 10%;
+  display: block;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: rgb(255, 255, 255, 0.2);
+  background-size: 0.5rem auto;
+  position: absolute;
+  z-index: 150;
+  /* margin-top: -1.25rem; */
+
 }
 
 .img-main {

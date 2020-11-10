@@ -21,33 +21,60 @@ function scrollAuto() {
   window.scrollTo(0, winTop);
 }
 
-function image_pop(toggle, id) {
+function is_landscape(id) {
+  var landscape = [2, 6, 10];
+  return landscape.includes(id);
+}
+
+function image_pop(toggle, id, slide) {
   var elem = $(".gallery-pop-wrap");
   var pbd = elem.find(".pop-body");
   var img = pbd.find("#img"+id);
 
-  if(toggle === "open"){
-    elem.css({
-      "opacity": 1,
-      "transform": "translate3d(0,0,0)"
-    });
+  var viewport_width = document.documentElement.clientWidth;
+  if (is_landscape(id)) {
+    var img_height = viewport_width * 0.8 * 816 / 1225;
+    console.log("ls" + img_height);
+  } else {
+    var img_height = viewport_width * 0.8 * 1225 / 816;
+    console.log("pt" + img_height);
 
-    pbd.css({"visibility": "visible"}).delay(400).animate({
-      "opacity": 1
-    }, 300);
+  }
+  var elem_slider = $(".slider > a");
+
+  if (toggle === "open"){
+
+    if (slide != 1) {
+      elem.css({
+        "opacity": 1,
+        "transform": "translate3d(0,0,0)"
+      });
+
+      pbd.css({"visibility": "visible"}).delay(200).animate({
+        "opacity": 1
+      }, 200);
+    }
 
     img.css({
       "visibility": "visible",
-    }).delay(400).animate({
+      "height": img_height + "px"
+    }).delay(200).animate({
       "opacity": 1,
-      "height": "100%"
-    }, 300);
+    }, 200);
+
+    elem_slider.css({
+      "height": img_height + "px"
+    });
+
+    $("#picnum").html(id + " / 12");
 
     scrollFixed();
 
   } else if(toggle === "close"){
-    elem.removeAttr("style");
-    pbd.removeAttr("style");
+    if (slide != 1) {
+      elem.removeAttr("style");
+      pbd.removeAttr("style");
+    }
     var i;
     var num_img = 12;
     for (i = 1; i < num_img+1; i++) {
@@ -57,3 +84,22 @@ function image_pop(toggle, id) {
     scrollAuto();
   }
 }
+
+function slide(direction, id) {
+  console.log(direction + " from " + id);
+  if (direction == "prev") {
+    if (id > 1) {
+      image_pop("close", 0, 1);
+      image_pop("open", id - 1);
+    }
+  } else if (direction == "next") {
+    if (id < 12) {
+      image_pop("close", 0, 1);
+      image_pop("open", id + 1);
+    }
+  }
+
+
+
+}
+
