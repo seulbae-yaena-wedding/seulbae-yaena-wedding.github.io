@@ -139,6 +139,11 @@ a:hover {
   line-height: 0;
 }
 
+.small-margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 /* popup */
 .pop-body{
   position:relative; background:#fff; padding:1.875rem 0;
