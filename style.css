@@ -181,7 +181,7 @@ a:hover {
   display: block;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-color: rgb(255, 255, 255, 0.2);
+  background-color: rgb(255, 255, 255, 0.1);
   background-size: 0.5rem auto;
   position: absolute;
   z-index: 150;
