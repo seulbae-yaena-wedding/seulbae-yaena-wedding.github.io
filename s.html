@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="w3.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
   <script type="text/javascript" src="gallery.js"></script>
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   <script>
@@ -32,6 +35,84 @@
       font-style: normal;
   }
   </style>
+
+  <script>
+    $(document).on("pagecreate", function(){
+      $("#img1").on("swipeleft", function(){
+        slide('next', 1)
+      });
+      $("#img1").on("swiperight", function(){
+        slide('prev', 1)
+      });
+      $("#img2").on("swipeleft", function(){
+        slide('next', 2)
+      });
+      $("#img2").on("swiperight", function(){
+        slide('prev', 2)
+      });
+      $("#img3").on("swipeleft", function(){
+        slide('next', 3)
+      });
+      $("#img3").on("swiperight", function(){
+        slide('prev', 3)
+      });
+      $("#img4").on("swipeleft", function(){
+        slide('next', 4)
+      });
+      $("#img4").on("swiperight", function(){
+        slide('prev', 4)
+      });
+      $("#img5").on("swipeleft", function(){
+        slide('next', 5)
+      });
+      $("#img5").on("swiperight", function(){
+        slide('prev', 5)
+      });
+      $("#img6").on("swipeleft", function(){
+        slide('next', 6)
+      });
+      $("#img6").on("swiperight", function(){
+        slide('prev', 6)
+      });
+      $("#img7").on("swipeleft", function(){
+        slide('next', 7)
+      });
+      $("#img7").on("swiperight", function(){
+        slide('prev', 7)
+      });
+      $("#img8").on("swipeleft", function(){
+        slide('next', 8)
+      });
+      $("#img8").on("swiperight", function(){
+        slide('prev', 8)
+      });
+      $("#img9").on("swipeleft", function(){
+        slide('next', 9)
+      });
+      $("#img9").on("swiperight", function(){
+        slide('prev', 9)
+      });
+      $("#img10").on("swipeleft", function(){
+        slide('next', 10)
+      });
+      $("#img10").on("swiperight", function(){
+        slide('prev', 10)
+      });
+      $("#img11").on("swipeleft", function(){
+        slide('next', 11)
+      });
+      $("#img11").on("swiperight", function(){
+        slide('prev', 11)
+      });
+      $("#img12").on("swipeleft", function(){
+        slide('next', 12)
+      });
+      $("#img12").on("swiperight", function(){
+        slide('prev', 12)
+      });
+    });
+  </script>
+
 </head>
 
 <body>
