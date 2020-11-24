@@ -40,6 +40,7 @@ function image_pop(toggle, id, slide) {
     console.log("pt" + img_height);
 
   }
+  var img_height = viewport_width * 0.8 * 1225 / 816;
   var elem_slider = $(".slider > a");
 
   if (toggle === "open"){

@@ -86,6 +86,12 @@ p {
   opacity: 0.7;
 }
 .gallery-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   max-width: 80%;
   max-height: 100%;
 }
@@ -157,6 +163,7 @@ a:hover {
   opacity:0;
 }
 .box {
+  position: relative;
   visibility:hidden;
   opacity:0;
   margin: auto;
